@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.hero {
+    background: url('images/High_resolution_wallpaper_background_ID_77701605548.jpg') center center / cover no-repeat;
+    height: 100vh;
+    position: relative;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.lang-btn, .sign-in-btn {
+    padding: 25px 55px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.lang-btn {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: 1px solid #777;
+}
+
+.sign-in-btn {
+    background: red;
+    color: white;
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content h1 {
+    font-size: 5.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.email-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.email-form input {
+    flex: 1;
+    padding: 20px 100px;
+    border: 1px solid rgba(255, 255, 255, 0.839);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.894);
+}
+
+.email-form button {
+    background: red;
+    padding: 20px 100px;
+    border: none;
+    border-radius: 10px; 
+    color: rgb(255, 255, 255);
+    font-size: 2.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.trending {
+    padding: 30px 60px;
+    background: black;
+    color: white;
+    justify-content: center;
+}
+
+.trending h2 {
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+}
+
+.trending-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 45px;
+    scrollbar-width: none; /* Firefox */
+        justify-content: center;
+
+}
+
+.trending-row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.trending-item {
+    position: relative;
+    min-width: 140px;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.trending-item:hover {
+    transform: scale(1.1);
+}
+
+.trending-item img {
+    width: 100%;
+    height: 520px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.trending-item .number {
+    position: absolute;
+    bottom: 28px;
+    left: 2px;
+    font-size: 8rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+body {
+    background-color: black;
+}
+
+/* More Reasons section */
+.more-reasons h2 {
+    color: white; 
+    font-size: 50px;
+    margin: 40px 40px 20px;
+}
+
+.reasons-grid {
+    display: grid;
+    gap: 40px;
+    padding-left: 250px;
+    padding-top: 20px;
+    padding-right: 250px;
+}
+
+@media (min-width: 768px) {
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .reasons-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.reason-card {
+    background: linear-gradient(135deg, #1e3a8a, #6b21a8);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    min-height: 800px;
+    position: relative;
+    color: white;
+}
+
+.reason-card h3 {
+    font-size: 60px;
+    margin-top: 30px;
+}
+
+.reason-card p {
+    margin-top: 30px;
+    font-size: 34px;
+    flex: 1;
+}
+
+.reason-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+/* Small screen (mobile) */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .email-form {
+        flex-direction: column;
+    }
+    .email-form input, .email-form button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 15px 20px;
+    }
+    .lang-btn, .sign-in-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    .trending h2 {
+        font-size: 2rem;
+    }
+    .trending-item img {
+        width: 250px;
+        height: 350px;
+    }
+    .trending-item .number {
+        font-size: 4rem;
+    }
+    .reason-card {
+        min-width: 100%;
+        min-height: 400px;
+    }
+    .reason-card h3 {
+        font-size: 28px;
+    }
+    .reason-card p {
+        font-size: 18px;
+    }
+}
+
+/* Medium desktop (769px - 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1.8rem;
+    }
+    .email-form input {
+        padding: 15px 50px;
+        font-size: 1.2rem;
+    }
+    .email-form button {
+        padding: 15px 50px;
+        font-size: 1.8rem;
+    }
+    .lang-btn, .sign-in-btn {
+        padding: 15px 30px;
+        font-size: 24px;
+    }
+    .trending h2 {
+        font-size: 2.5rem;
+    }
+    .trending-item img {
+        width: 300px;
+        height: 450px;
+    }
+    .trending-item .number {
+        font-size: 5rem;
+    }
+    .reason-card {
+        min-width: 250px;
+        min-height: 600px;
+    }
+    .reason-card h3 {
+        font-size: 40px;
+    }
+    .reason-card p {
+        font-size: 24px;
+    }
+}
